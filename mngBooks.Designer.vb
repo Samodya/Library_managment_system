@@ -57,6 +57,7 @@ Partial Class mngBooks
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.reg_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.dgvBookM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -354,11 +355,20 @@ Partial Class mngBooks
         Me.reg_date.Name = "reg_date"
         Me.reg_date.ReadOnly = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(542, 231)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(232, 29)
+        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.Visible = False
+        '
         'mngBooks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1029, 630)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.dgvBookM)
         Me.Controls.Add(Me.txtStat)
         Me.Controls.Add(Me.Label10)
@@ -429,4 +439,5 @@ Partial Class mngBooks
     Friend WithEvents price As DataGridViewTextBoxColumn
     Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents reg_date As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox1 As TextBox
 End Class

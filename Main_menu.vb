@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub btnAddmember_Click(sender As Object, e As EventArgs) Handles btnAddmember.Click
-        Form1.Show()
+        mngBooks.Show()
         Me.Close()
     End Sub
 

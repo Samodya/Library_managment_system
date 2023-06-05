@@ -78,7 +78,7 @@ Public Class mngBooks
         Dim pages As String = CInt(txtPage.Text)
         Dim price As String = CDec(txtPrice.Text)
         Dim stat As String = "Available"
-        Dim Addate As String = dtpreg_date.Value
+        Dim Addate As String = dtpreg_date.Value.Date
 
         Dim query As String = "INSERT INTO `books`(`isbn_no`, `bookname`, `language`, `auther_name`, `publisher`, `catagory`, `pages`, `price`, `status`, `date`) VALUES (@isbn,@bname,@lang,@author,@publish,@catog, @pages, @price,@stat,@regdate);"
 
@@ -108,9 +108,17 @@ Public Class mngBooks
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim newForm As New mngBooks()
+
+        Dim query As String = "UPDATE your_table SET column1 = @newColumn1Value, column2 = @newColumn2Value WHERE id = @recordId;"
+
+        Using connection As MySqlConnection = GetConnection()
 
 
 
+        End Using
+        newForm.Show()
+        Me.Close()
 
     End Sub
 
